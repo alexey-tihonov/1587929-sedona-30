@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алексей Тихонов](https://up.htmlacademy.ru/htmlcss/30/user/1587929).
-* Наставник: [Екатерина Комнатная] (https://up.htmlacademy.ru/htmlcss/30/user/215761).
+* Наставник: [Екатерина Комнатная](https://up.htmlacademy.ru/htmlcss/30/user/215761).
 
 ---
 
