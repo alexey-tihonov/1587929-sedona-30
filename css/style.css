@@ -23,6 +23,8 @@
   --basic-black: #000000;
   --basic-extra-black: #6A6A6A;
 
+  --basic-dark: #333333;
+
   --basic-gray: #A9A9A9;
   --basic-extra-gray: #BDBBBC;
 
@@ -30,6 +32,7 @@
   --basic-extra-light: #EBEBEB;
 
   --basic-white: #ffffff;
+  --basic-extra-white: #E5E5E5;
 
   --basic-blue: #81B3D2;
   --basic-extra-blue: #669EC0;
@@ -59,41 +62,13 @@ body {
   background-repeat: no-repeat;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
-  font-size: 21px;
-}
-
 a {
   text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: var(--basic-blue);
 }
 
 img {
   max-width: 100%;
   height: auto;
-}
-
-*:focus {
-  outline: none;
-}
-
-button, [type="button"], [type="reset"], [type="submit"] {
-  outline: 0;
-  border: 0;
-  border-radius: 0;
-}
-
-input,
-button,
-label {
-  font-size: inherit;
-  font-weight: bold;
-  line-height: inherit;
 }
 
 /* Main navigation */
@@ -107,12 +82,19 @@ label {
   text-align: center;
 }
 
-.nav__list:active {
-  opacity: 0.3;
+.nav__item-link {
+  font-weight: bold;
+  color: var(--basic-black);
 }
 
-.nav__item-link {
-  color: var(--basic-black);
+.nav__item-link:hover,
+.nav__item-link:focus {
+  color: var(--basic-blue);
+}
+
+.nav__item-link:active {
+  color: inherit;
+  opacity: 0.3;
 }
 
 .nav__item--current .nav__item-link {
@@ -120,15 +102,26 @@ label {
 }
 
 /* Content */
+.page-body {
+  text-align: center;
+}
 
 .main {
   background-color: var(--basic-white);
+}
+
+.main p {
+  color: var(--basic-dark);
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.title {
+  font-size: 21px;
 }
 
 /* Slider */
@@ -152,8 +145,12 @@ label {
   background-color: var(--special);
 }
 
-.features__list-item {
+.features__item {
   text-align: center;
+}
+
+.features-group:nth-of-type(2n+1) * {
+  color: var(--basic-white);
 }
 
 /* Booking */
@@ -162,7 +159,6 @@ label {
   width: 100%;
   margin: 0 auto;
   line-height: 24px;
-  text-align: center;
 }
 
 .booking__title {
@@ -190,28 +186,40 @@ label {
 /* Search Form*/
 
 .search-form {
+  font-weight: bold;
   text-align: left;
   background-color: inherit;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .search-form__input {
+  font-size: inherit;
+  font-weight: bold;
   background-color: var(--basic-light);
-  border: 2px solid var(--basic-light);
+  border: 0;
   box-sizing: border-box;
+  outline: 2px solid var(--basic-light);
 }
 
 .search-form__input:hover {
   background-color: var(--basic-extra-light);
-  border-color: var(--basic-extra-light);
+  outline: 2px solid var(--basic-extra-light);
 }
 
 .search-form__input:focus {
   background-color: var(--basic-white);
-  border-color: #E5E5E5;
+  outline: 2px solid var(--basic-extra-white);
+}
+
+.search-form__input::placeholder {
+  color: var(--basic-black);
 }
 
 /* Button */
+.button {
+  text-transform: uppercase;
+}
+
 .button-submit {
   font-size: 21px;
   color: var(--basic-white);
@@ -240,12 +248,16 @@ label {
   color: var(--basic-black);
 }
 
-
 .button-minus:active,
 .button-plus:active {
   color: var(--basic-blue);
 }
 
+.search-form__button {
+  font-weight: bold;
+  outline: 0;
+  border: 0;
+}
 
 /* Map */
 .map {
