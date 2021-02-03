@@ -21,9 +21,11 @@
 
 :root {
   --basic-black: #000000;
+  --basic-black--rgb: 0, 0, 0;
   --basic-extra-black: #6A6A6A;
 
   --basic-dark: #333333;
+  --basic-extra-dark: #666666;
 
   --basic-gray: #A9A9A9;
   --basic-extra-gray: #BDBBBC;
@@ -342,22 +344,23 @@ img {
   background-color: var(--basic-white);
 }
 
+.sort__content {
+  font-size: 12px;
+}
+
 .sort__list-item:not(.sort__list-item--active) a {
-  color: var(--basic-black);
+  color: rgba(var(--basic-black--rgb), .3);
   border-bottom: 1px dashed var(--basic-blue);
-  opacity: 0.3;
 }
 
 .sort__list-item:not(.sort__list-item--active) a:hover,
 .sort__list-item:not(.sort__list-item--active) a:focus {
   color: var(--basic-blue);
-  opacity: 1;
 }
 
 .sort__list-item:not(.sort__list-item--active) a:active {
   color: var(--basic-black);
   border-bottom: 0;
-  opacity: 1;
 }
 
 .sort__list-item--active a {
@@ -411,11 +414,8 @@ img {
   list-style-type: none;
 }
 
-.card__content-title {
-  font-size: 26px;
-}
-
-.card__rating-text {
+main .card__rating-text {
   display: inline-block;
-  background: #F2F2F2;
+  color: var(--basic-extra-dark);
+  background: var(--basic-light);
 }
