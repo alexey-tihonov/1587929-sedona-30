@@ -49,7 +49,7 @@
 
 /* Global */
 
-body {
+.page-body {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -62,6 +62,11 @@ body {
   background-color: var(--basic-light);
   background-position: top center;
   background-repeat: no-repeat;
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -73,12 +78,29 @@ img {
   height: auto;
 }
 
+/* Grid */
+.page {
+  height: 100%;
+}
+
+/* Header */
+.header {
+
+}
+
+.header__logo {
+  justify-self: center;
+}
+
 /* Main navigation */
 .nav {
+  display: grid;
   background-color: var(--basic-white);
 }
 
 .nav__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   list-style: none;
 }
 
@@ -139,11 +161,27 @@ img {
 
 /* Features */
 .features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   line-height: 21px;
 }
 
+.features__title {
+  grid-column: 1 / -1;
+}
+
 .features__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 0;
+  justify-content: center;
   list-style: none;
+  padding: 0;
+}
+
+.features-group {
+  display: grid;
+  grid-column: 1 / -1;
 }
 
 .features-group:nth-of-type(2n+1) {
@@ -158,8 +196,18 @@ img {
   color: var(--basic-white);
 }
 
+.features-group:nth-of-type(2n+1) .features__list {
+  grid-template-columns: 1fr;
+}
+
+.features__item-img {
+  max-width: none;
+  grid-column: 2 / 3;
+}
+
 /* Booking */
 .booking {
+  display: grid;
   max-width: 568px;
   width: 100%;
   margin: 0 auto;
@@ -269,6 +317,7 @@ img {
 
 /* Map */
 .map {
+  display: grid;
   width: 100%;
   min-height: 593px;
   background: var(--basic-light) url("../img/map.jpg");
@@ -276,7 +325,13 @@ img {
 
 /* Footer */
 .footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background: rgba(var(--basic-white), 0.9);
+}
+
+.footer__item {
+  align-self: center;
 }
 
 .footer-contacts__text {
@@ -292,8 +347,12 @@ img {
   list-style: none;
 }
 
-.footer-social__item-link {
+.footer-social__item {
   display: inline-block;
+}
+
+.footer-social__item-link {
+  display: block;
   width: 46px;
   height: 48px;
   background: var(--basic-blue);
@@ -306,6 +365,10 @@ img {
 
 .footer-social__item-link:active {
   background-color: var(--basic-extra-dark-blue);
+}
+
+.footer-social__item-icon {
+  display: block;
 }
 
 .footer-copyright__link:hover .footer-copyright__logo,
@@ -411,7 +474,9 @@ img {
 .filter__list,
 .sort__list,
 .accommodation__list{
-  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 main .card__rating-text {
