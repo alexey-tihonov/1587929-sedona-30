@@ -382,9 +382,19 @@ img {
 
 /* Catalog */
 .filter {
+  display: grid;
   color: var(--basic-white);
   background: var(--basic-blue) url("../img/filter-bg.jpg") no-repeat;
   line-height: 21px;
+}
+
+.filter__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "i a c"
+    "i a b"
 }
 
 .filter__form legend {
@@ -392,7 +402,20 @@ img {
   font-weight: bold;
 }
 
+.filter-infrastructure{
+  grid-area: i;
+}
+
+.filter-accommodation {
+  grid-area: a;
+}
+
+.filter-cost {
+  grid-area: c;
+}
+
 .filter__button {
+  grid-area: b;
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-white);
@@ -407,8 +430,55 @@ img {
   background-color: var(--basic-white);
 }
 
+/* Sort */
+
+.sort {
+  display: grid;
+}
+
+.sort__content-wrap {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.sort__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.accommodation__list-item {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.sort__content,
+.card-wrap {
+  grid-column: 1 / 4;
+  display: flex;
+  align-items: center;
+}
+
+.sort__controls,
+.card__rating {
+  grid-column: 4 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card__rating {
+  align-items: flex-end;
+}
+
 .sort__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 12px;
+}
+
+.card__content {
+  margin: 0 0 0 20px;
 }
 
 .sort__list-item:not(.sort__list-item--active) a {
