@@ -14,39 +14,37 @@
 <body class="page-body">
   <div class="page-wrapper">
     <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a href="" class="header__logo">
-            <img class="header__logo-img" src="img/logo/logo.png" width="138" height="70" alt="Логотип проекта «Седона»">
-          </a>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__item-link link" href="#">Информация</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__item-link link" href="#">Фото и видео</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__item-link link" href="#">Карта штата</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__item-link link" href="catalog.html">Гостиницы</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="nav">
+        <a href="index.html" class="header__logo">
+          <img class="header__logo-img" src="img/logo/logo.png" width="138" height="70" alt="Логотип проекта «Седона»">
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__item-link link" href="#">Информация</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link link" href="#">Фото и видео</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link link" href="#">Карта штата</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link link" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="main text-center">
 
-      <h1 class="main__title title title-hidden">«Седона»</h1>
+      <h1 class="main__title title visually-hidden">«Седона»</h1>
 
       <section class="slider">
-        <h2 class="slider__title title title-hidden">Слайдер</h2>
+        <h2 class="slider__title title visually-hidden">Слайдер</h2>
       </section>
 
       <section class="about">
-        <h2 class="about__title title title-hidden">Описание</h2>
+        <h2 class="about__title title visually-hidden">Описание</h2>
         <div class="about__content">
           <h3 class="about__content-title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
           <p class="about__content-text">
@@ -56,7 +54,7 @@
       </section>
 
       <section class="features">
-        <h2 class="features__title title title-hidden">Преимущества</h2>
+        <h2 class="features__title title visually-hidden">Преимущества</h2>
 
         <div class="features-group">
           <ul class="features__list">
@@ -105,17 +103,17 @@
             <li class="features__item">
               <h3 class="features__item-title title">Небольшая площадь</h3>
               <span class="features__item-number">— №3 —</span>
-              <p class="features__item-text">Все достопримечательности находятся очень близко</p>
+              <p class="features__item-text">Все достопримечательности<br>находятся очень близко</p>
             </li>
             <li class="features__item">
               <h3 class="features__item-title title">Красивая дорога</h3>
               <span class="features__item-number">— №4 —</span>
-              <p class="features__item-text">Ехать в седону из лас-вегаса совсем не скучно!</p>
+              <p class="features__item-text">Ехать в седону из лас-вегаса совсем<br>не скучно!</p>
             </li>
             <li class="features__item">
               <h3 class="features__item-title title">Мало туристов</h3>
               <span class="features__item-number">— №5 —</span>
-              <p class="features__item-text">Большинство едет в гранд каньон и толпится там</p>
+              <p class="features__item-text">Большинство едет в гранд каньон<br>и толпится там</p>
             </li>
           </ul>
         </div>
@@ -126,23 +124,23 @@
         <h2 class="booking__title title">Заинтересовались?</h2>
         <p class="booking__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <div class="booking__content">
-          <h3 class="booking__content-title title">
+          <button class="booking__content-button button" type="button">
             Поиск гостиницы в Седоне
-          </h3>
+          </button>
           <form class="booking__content-form search-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="search-form__item">
               <label class="search-form__label" for="arrival-field">Дата заезда: </label>
               <input id="arrival-field" class="search-form__input-text input-date" type="text" name="arrival" placeholder="24 апреля 2017">
-              <span class="search-form__control">
+              <button class="search-form__control search-form__calendar button" type="button">
                 <svg width="21" height="23" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.4 3h2.9c1 0 1.7.8 1.7 1.9v16.3c0 1-.8 1.8-1.7 1.8H1.7c-1 0-1.7-.8-1.7-1.8V4.9C0 3.9.8 3 1.8 3h2.8V1.6c0-.3.3-.6.7-.6.3 0 .6.3.6.6V3h4V1.6c0-.3.2-.6.6-.6.4 0 .7.3.7.6V3H15V1.6c0-.3.3-.6.7-.6.3 0 .6.3.6.6V3zm3.2 18.5V4.9c0-.3-.1-.5-.3-.5h-2.9v1.4c0 .4-.3.7-.6.7a.7.7 0 01-.7-.7V4.4h-4v1.4c0 .4-.2.7-.6.7a.7.7 0 01-.7-.7V4.4H6v1.4c0 .4-.3.7-.6.7a.7.7 0 01-.7-.7V4.4H1.8c-.3 0-.5.2-.5.5v16.3c0 .2.2.4.4.4h17.6l.3-.1z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.6 9.2h2.6v2H4.6v-2zm0 3.5h2.6v2H4.6v-2zM7.2 16H4.6v2h2.6v-2zm2 0h2.6v2H9.2v-2zm2.6-3.4H9.2v2h2.6v-2zM9.2 9.2h2.6v2H9.2v-2zm7.2 7h-2.6v2h2.6v-2zm-2.6-3.5h2.6v2h-2.6v-2zm2.6-3.5h-2.6v2h2.6v-2z"/></svg>
-              </span>
+              </button>
             </div>
             <div class="search-form__item">
               <label class="search-form__label" for="departure-field">Дата выезда: </label>
               <input id="departure-field" class="search-form__input-text input-date" type="text" name="departure" placeholder="4 июля 2017">
-              <span class="search-form__control">
+              <button class="search-form__control search-form__calendar button" type="button">
                 <svg width="21" height="23" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.4 3h2.9c1 0 1.7.8 1.7 1.9v16.3c0 1-.8 1.8-1.7 1.8H1.7c-1 0-1.7-.8-1.7-1.8V4.9C0 3.9.8 3 1.8 3h2.8V1.6c0-.3.3-.6.7-.6.3 0 .6.3.6.6V3h4V1.6c0-.3.2-.6.6-.6.4 0 .7.3.7.6V3H15V1.6c0-.3.3-.6.7-.6.3 0 .6.3.6.6V3zm3.2 18.5V4.9c0-.3-.1-.5-.3-.5h-2.9v1.4c0 .4-.3.7-.6.7a.7.7 0 01-.7-.7V4.4h-4v1.4c0 .4-.2.7-.6.7a.7.7 0 01-.7-.7V4.4H6v1.4c0 .4-.3.7-.6.7a.7.7 0 01-.7-.7V4.4H1.8c-.3 0-.5.2-.5.5v16.3c0 .2.2.4.4.4h17.6l.3-.1z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.6 9.2h2.6v2H4.6v-2zm0 3.5h2.6v2H4.6v-2zM7.2 16H4.6v2h2.6v-2zm2 0h2.6v2H9.2v-2zm2.6-3.4H9.2v2h2.6v-2zM9.2 9.2h2.6v2H9.2v-2zm7.2 7h-2.6v2h2.6v-2zm-2.6-3.5h2.6v2h-2.6v-2zm2.6-3.5h-2.6v2h2.6v-2z"/></svg>
-              </span>
+              </button>
             </div>
             <div class="search-form__item">
               <div class="search-form__col">
@@ -156,7 +154,7 @@
                 </button>
               </div>
               <div class="search-form__col">
-                <label class="search-form__label" for="childs-field">Дети: </label>
+                <label class="search-form__label search-form__label--childs" for="childs-field">Дети: </label>
                 <button class="search-form__control button" type="button">
                   <svg width="12" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h12v3H0z"/></svg>
                 </button>
@@ -176,7 +174,7 @@
       </section>
     </main>
 
-    <footer class="footer text-center">
+    <footer class="footer footer-index text-center">
       <section class="footer__item footer-contacts">
         <p class="footer-contacts__text">#visitSEDONA</p>
         <p class="footer-contacts__text">
