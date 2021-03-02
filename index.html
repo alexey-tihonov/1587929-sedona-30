@@ -8,8 +8,7 @@
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="page-body">
   <div class="page-wrapper">
@@ -127,7 +126,7 @@
           <button class="booking__content-button button" type="button">
             Поиск гостиницы в Седоне
           </button>
-          <form class="booking__content-form search-form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="booking__content-form search-form search-form--hidden search-form--closed" action="https://echo.htmlacademy.ru" method="post">
             <div class="search-form__item">
               <label class="search-form__label" for="arrival-field">Дата заезда: </label>
               <input id="arrival-field" class="search-form__input-text input-date" type="text" name="arrival" placeholder="24 апреля 2017" required>
@@ -170,7 +169,8 @@
       </section>
 
       <section class="map">
-        <h2 class="map__title title">Карта</h2>
+        <h2 class="map__title title visually-hidden">Карта</h2>
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413333.6640812182!2d-112.69325704480049!3d34.63682095753958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1614662397848!5m2!1sru!2sru" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </section>
     </main>
 
@@ -212,5 +212,7 @@
       </section>
     </footer>
   </div>
+
+  <script src="js/script.min.js"></script>
 </body>
 </html>

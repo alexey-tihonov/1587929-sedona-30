@@ -168,6 +168,7 @@ img {
 
 .link {
   display: inline-block;
+  vertical-align: middle;
   font-weight: bold;
   color: var(--basic-black);
 }
@@ -322,17 +323,20 @@ img {
 }
 
 .features-group:nth-of-type(2) .features__item {
-  padding-top: 58px;
-  padding-bottom: 78px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-top: 55px;
+  padding-bottom: 81px;
 }
 
 .features__item-title {
   max-width: 150px;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .features__item-number {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   color: var(--basic-dark);
 }
 
@@ -374,9 +378,12 @@ img {
 
 .booking__content {
   position: relative;
+  height: 86px;
 }
 
 .booking__content-button {
+  position: absolute;
+  top: 0;
   display: block;
   width: 100%;
   margin: 0;
@@ -386,6 +393,7 @@ img {
   line-height: 26px;
   color: var(--basic-white);
   background-color: var(--basic-brown);
+  z-index: 2;
 }
 
 .booking__content-button:hover {
@@ -405,7 +413,9 @@ img {
 /* Search Form*/
 
 .search-form {
+  visibility: visible;
   position: absolute;
+  top: 86px;
   width: 100%;
   font-weight: bold;
   text-align: left;
@@ -414,8 +424,19 @@ img {
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-animation: show 0.6s forwards;
+  animation: show 0.6s forwards;
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
   padding: 55px;
-  z-index: 10;
+  z-index: 1;
+}
+
+.search-form--hidden {
+  visibility: hidden;
+  -webkit-animation: hide 0.6s forwards;
+  animation: hide 0.6s forwards;
 }
 
 .search-form input {
@@ -594,7 +615,10 @@ img {
 .map {
   width: 100%;
   min-height: 593px;
-  background: var(--basic-light) url("../img/map.jpg");
+}
+
+.map__iframe:focus {
+  outline: 1px solid var(--special-dark);
 }
 
 /* Footer */
@@ -713,6 +737,7 @@ img {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-left: 8px;
+  margin-bottom: 5px;
 }
 
 .footer-copyright__link:focus {
@@ -1163,6 +1188,7 @@ img {
 
 .item__rating-text {
   display: inline-block;
+  vertical-align: middle;
   color: var(--basic-extra-dark);
   background: var(--basic-light);
   margin: 0;
@@ -1219,4 +1245,54 @@ img {
 
 .btn--book:focus {
   outline: 2px solid var(--basic-extra-dark-brown);
+}
+
+/* Animations */
+
+@-webkit-keyframes show {
+  from {
+    -webkit-transform: scaleY(0) translateY(-100%);
+    transform: scaleY(0) translateY(-100%);
+  }
+  to {
+    -webkit-transform: scaleY(1) translateY(0);
+    transform: scaleY(1) translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes show {
+  from {
+    -webkit-transform: scaleY(0) translateY(-100%);
+    transform: scaleY(0) translateY(-100%);
+  }
+  to {
+    -webkit-transform: scaleY(1) translateY(0);
+    transform: scaleY(1) translateY(0);
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes hide {
+  from {
+    -webkit-transform: scaleY(1) translateY(0);
+    transform: scaleY(1) translateY(0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: scaleY(0) translateY(-100%);
+    transform: scaleY(0) translateY(-100%);
+  }
+}
+
+@keyframes hide {
+  from {
+    -webkit-transform: scaleY(1) translateY(0);
+    transform: scaleY(1) translateY(0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: scaleY(0) translateY(-100%);
+    transform: scaleY(0) translateY(-100%);
+  }
 }
