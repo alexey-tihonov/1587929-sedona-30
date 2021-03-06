@@ -1180,7 +1180,7 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 24px 73px 31px;
+  padding: 24px 73px 30px;
   border-bottom: 1px solid var(--basic-extra-white);
 }
 
@@ -1305,7 +1305,7 @@ img {
   line-height: 21px;
   text-align: center;
   color: var(--basic-white);
-  padding: 4px 16px 5px;
+  padding: 3px 16px 3px;
 }
 
 .btn:active span {
