@@ -1305,7 +1305,7 @@ img {
   line-height: 21px;
   text-align: center;
   color: var(--basic-white);
-  padding: 3px 16px 3px;
+  padding: 3px 16px;
 }
 
 .btn:active span {
