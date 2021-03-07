@@ -229,7 +229,8 @@ img {
   min-height: 509px;
   background: url(../img/slider/slider-bottom.svg) 50% 100% no-repeat,
   url(../img/slider/welcome.svg) 50% 49% no-repeat,
-  var(--basic-light) url(../img/slider/slider.jpg) 0 20% no-repeat;
+  url(../img/slider/slider.jpg) 0 20% no-repeat,
+  var(--basic-light);
   margin-bottom: 44px;
 }
 
@@ -778,7 +779,11 @@ img {
 .filter {
   color: var(--basic-white);
   background: var(--basic-blue) url("../img/filter-bg.jpg") no-repeat;
-  background-size: cover;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -khtml-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
   line-height: 21px;
 }
 
